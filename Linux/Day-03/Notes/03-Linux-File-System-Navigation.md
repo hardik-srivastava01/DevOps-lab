@@ -233,9 +233,7 @@ Today I learned how Linux organizes files and directories and how to navigate ef
 
 Tomorrow I will learn:
 
-- inux File Permissions (r, w, x)
+- Linux File Permissions (r, w, x)
 - Ownership (Owner, Group, Others)
 - Permission Modes (755, 644, 777)
-- Permission Management Commands
-  chmod 
-  chown 
+- Permission Management Commands (chmod chown)
