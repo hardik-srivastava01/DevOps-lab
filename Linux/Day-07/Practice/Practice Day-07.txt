@@ -1,0 +1,107 @@
+# Linux Day 7 Practice Log
+
+## Objective
+
+Practice Linux file archiving, compression, extraction, disk usage analysis, and disk space management using `tar`, `gzip`, `gunzip`, `zip`, `unzip`, `du`, and `df`.
+
+---
+
+## Commands Executed
+
+```bash
+mkdir Linux-Day7
+cd Linux-Day7
+
+mkdir Project Logs Backup
+
+touch Project/app.py
+touch Project/config.yml
+touch Logs/app.log
+touch Logs/error.log
+
+echo "Linux" > notes.txt
+echo "Docker" >> notes.txt
+echo "Kubernetes" >> notes.txt
+
+tar -cvf project.tar Project/
+
+tar -tvf project.tar
+
+mkdir Extract
+
+tar -xvf project.tar -C Extract/
+
+gzip notes.txt
+
+gunzip notes.txt.gz
+
+gzip -k notes.txt
+
+zip notes.zip notes.txt
+
+zip -r project.zip Project/
+
+unzip -l project.zip
+
+mkdir ZipExtract
+
+unzip project.zip -d ZipExtract/
+
+du
+
+du -h
+
+du -sh Project/
+
+df
+
+df -h
+
+cd ..
+
+rm -r Linux-Day7
+```
+
+---
+
+## Result
+
+- Successfully created a practice directory.
+- Created sample project and log files.
+- Created a `.tar` archive using `tar`.
+- Verified archive contents without extracting.
+- Extracted the archive into a separate directory.
+- Compressed files using `gzip`.
+- Decompressed files using `gunzip`.
+- Preserved the original file using `gzip -k`.
+- Created ZIP archives using `zip`.
+- Extracted ZIP archives using `unzip`.
+- Checked directory size using `du`.
+- Checked available disk space using `df`.
+- Removed the practice directory after completing all exercises.
+
+---
+
+## Issues Faced
+
+Initially, I was confused about the difference between **Archive** and **Compression**. After practicing, I understood that:
+
+- `tar` combines multiple files into a single archive but does not reduce file size.
+- `gzip` compresses a file to reduce its size.
+- `.tar.gz` is created by first archiving files and then compressing the archive.
+- `zip` performs archiving and compression together.
+- `du` shows the size of files/directories, while `df` shows available and used disk space of the filesystem.
+
+I also learned how to verify archive contents before extraction and when to use each command in real-world scenarios.
+
+---
+
+## Time Taken
+
+60 minutes
+
+---
+
+## Status
+
+✅ Completed
