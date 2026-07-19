@@ -265,4 +265,4 @@ Tomorrow I will learn
 - /etc/group
 - /etc/shadow 
 - what is a sudo?
-- Least Privilege Principle
+
