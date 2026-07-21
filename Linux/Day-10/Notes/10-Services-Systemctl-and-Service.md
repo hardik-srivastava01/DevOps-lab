@@ -1,0 +1,456 @@
+# Linux Day 10 - Linux Services & Systemd
+
+## 🎯 Learning Objectives
+
+After completing this topic, you will be able to:
+
+- Understand what Linux Services are.
+- Differentiate Service and Process.
+- Understand Daemon Processes.
+- Learn the role of Systemd.
+- Manage services using systemctl.
+- Understand the Linux Boot Process (Basic).
+- Learn the Service Lifecycle.
+- Check service logs using journalctl.
+- Understand why services go down.
+- Differentiate Restart and Reload.
+
+---
+
+# What is it?
+
+Linux Services are background programs that continuously run to provide specific functionality to the operating system or users.
+
+Unlike normal programs, services usually start automatically during system boot and continue running until they are stopped.
+
+Examples:
+
+- SSH
+- Docker
+- Nginx
+- Apache
+- MySQL
+- Jenkins
+- Cron
+
+---
+
+# Why is it Important?
+
+Most production servers depend on services.
+
+If an important service stops, applications become unavailable.
+
+Examples:
+
+- SSH Service Down → Cannot remotely access the server.
+- Nginx Down → Website becomes unavailable.
+- Docker Down → Containers stop working.
+- MySQL Down → Application cannot access the database.
+
+---
+
+# Real DevOps Use Cases
+
+- Managing Web Servers.
+- Restarting failed services.
+- Monitoring production servers.
+- Enabling services during boot.
+- Troubleshooting service failures using logs.
+- Automating infrastructure.
+
+---
+
+# 1️⃣ Service vs Process
+
+## 📖 What is it?
+
+A Process is a running instance of any program.
+
+A Service is a special type of background process designed to provide continuous functionality to the system.
+
+## ❓ Why is it Needed?
+
+Not every program should keep running all the time.
+
+Only important applications like web servers, databases, and SSH run continuously as services.
+
+## ⚙️ How Does it Work?
+
+```
+Program
+      ↓
+Running Process
+      ↓
+Background Process (Daemon)
+      ↓
+Managed as a Service
+```
+
+## 🌍 Real-world Example
+
+Opening VS Code creates a Process.
+
+Running Nginx creates a Service.
+
+## ☁️ DevOps Use
+
+Understanding the difference helps troubleshoot production servers.
+
+## 🎤 Interview Tip
+
+**Q:** Service vs Process?
+
+**A:** Every Service is a Process, but not every Process is a Service.
+
+---
+
+# 2️⃣ Daemon Process
+
+## 📖 What is it?
+
+A Daemon is a background process that runs continuously without user interaction.
+
+Most Linux Services are Daemon Processes.
+
+Examples:
+
+- sshd
+- cron
+- nginx
+- docker
+
+## ❓ Why is it Needed?
+
+Important system services should always remain available.
+
+## 🌍 Real-world Example
+
+The SSH daemon waits for incoming remote connections 24×7.
+
+## ☁️ DevOps Use
+
+Production servers mainly run daemon processes.
+
+---
+
+# 3️⃣ Systemd
+
+## 📖 What is it?
+
+Systemd is the default Service Manager in modern Linux distributions.
+
+It manages services, starts them during boot, monitors them, and restarts them if required.
+
+## ❓ Why is it Needed?
+
+Managing hundreds of services manually is impossible.
+
+Systemd automates service management.
+
+## ⚙️ How Does it Work?
+
+```
+Computer Starts
+
+↓
+
+systemd Starts
+
+↓
+
+Starts Required Services
+
+↓
+
+SSH
+Docker
+Cron
+Nginx
+MySQL
+```
+
+## 🌍 Real-world Example
+
+When Ubuntu boots, systemd automatically starts SSH and Docker.
+
+## ☁️ DevOps Use
+
+Every DevOps Engineer works with systemd daily.
+
+## 🎤 Interview Tip
+
+**Q:** What is Systemd?
+
+**A:** Systemd is the init system and service manager responsible for starting and managing Linux services.
+
+---
+
+# 4️⃣ systemctl
+
+## 📖 What is it?
+
+systemctl is the command-line tool used to manage Linux services through systemd.
+
+## ❓ Why is it Needed?
+
+Allows administrators to start, stop, restart, enable, disable, and monitor services.
+
+## 🌍 Real-world Example
+
+```bash
+sudo systemctl status nginx
+sudo systemctl restart docker
+```
+
+## ☁️ DevOps Use
+
+One of the most frequently used commands in Linux administration.
+
+## 🎤 Interview Tip
+
+**Q:** What is systemctl used for?
+
+**A:** It manages services controlled by systemd.
+
+---
+
+# 5️⃣ Linux Boot Process (Basic)
+
+## 📖 What is it?
+
+The Boot Process is the sequence followed when a Linux system starts.
+
+## ⚙️ Boot Flow
+
+```
+Power ON
+
+↓
+
+BIOS / UEFI
+
+↓
+
+Bootloader (GRUB)
+
+↓
+
+Linux Kernel
+
+↓
+
+systemd
+
+↓
+
+Linux Services
+
+↓
+
+Login Screen
+```
+
+## 🌍 Real-world Example
+
+After restarting a server, systemd automatically starts Docker, SSH, and Nginx.
+
+## ☁️ DevOps Use
+
+Understanding boot helps troubleshoot servers that fail to start services.
+
+---
+
+# 6️⃣ Service Lifecycle
+
+## 📖 What is it?
+
+A Service changes its state during execution.
+
+Lifecycle:
+
+```
+Start
+
+↓
+
+Running
+
+↓
+
+Reload
+
+↓
+
+Restart
+
+↓
+
+Stop
+
+↓
+
+Failed
+```
+
+## ☁️ DevOps Use
+
+Used while maintaining production applications.
+
+---
+
+# 7️⃣ Service Logs (journalctl)
+
+## 📖 What is it?
+
+journalctl displays logs generated by systemd services.
+
+## ❓ Why is it Needed?
+
+Logs help identify why a service failed or crashed.
+
+## 🌍 Real-world Example
+
+```bash
+journalctl -u ssh
+```
+
+Displays SSH service logs.
+
+## ☁️ DevOps Use
+
+The first step in troubleshooting production incidents.
+
+## 🎤 Interview Tip
+
+**Q:** Which command is used to view service logs?
+
+**A:** journalctl
+
+---
+
+# 8️⃣ Why Do Services Go Down?
+
+Common Reasons:
+
+- Wrong configuration
+- Service crash
+- Memory full
+- CPU overload
+- Disk full
+- Network issues
+- Port already in use
+- Dependency failure
+- Human error
+- Permission issues
+
+## 🌍 Real-world Example
+
+Nginx configuration contains a syntax error.
+
+Service fails to start.
+
+Website becomes unavailable.
+
+## ☁️ DevOps Use
+
+Finding the root cause before restarting the service is a key responsibility of an SRE.
+
+---
+
+# 9️⃣ Restart vs Reload
+
+## Restart
+
+Stops the service completely and starts it again.
+
+Example:
+
+```bash
+sudo systemctl restart nginx
+```
+
+Use when:
+
+- Service crashes
+- Major configuration changes
+- Application update
+
+---
+
+## Reload
+
+Applies configuration changes without completely stopping the service.
+
+Example:
+
+```bash
+sudo systemctl reload nginx
+```
+
+Use when:
+
+- Small configuration updates
+- Avoiding downtime
+
+---
+
+# 💼 Real DevOps Scenario
+
+A monitoring tool reports that the production website is down.
+
+The DevOps Engineer follows this troubleshooting process:
+
+1. Check service status.
+2. Review service logs.
+3. Check CPU usage.
+4. Check Memory usage.
+5. Check Disk space.
+6. Verify Network connectivity.
+7. Validate configuration.
+8. Restart the service if required.
+9. Verify that the application is working.
+
+---
+
+# 📌 Key Takeaways
+
+- A Service is a background program managed by systemd.
+- Most services are daemon processes.
+- systemctl manages Linux services.
+- journalctl is used to view service logs.
+- Restart completely stops and starts a service.
+- Reload applies configuration without stopping the service.
+- Always identify the root cause before restarting a production service.
+
+---
+
+# 🎤 Interview Questions
+
+1. What is a Linux Service?
+2. Service vs Process?
+3. What is a Daemon Process?
+4. What is Systemd?
+5. What is systemctl?
+6. Explain the Linux Boot Process.
+7. What is the Service Lifecycle?
+8. Why do services go down?
+9. Restart vs Reload?
+10. How do you check service logs?
+11. What is journalctl?
+12. What steps would you follow if a production service is down?
+
+---
+
+# 📅 Next Step
+
+Tomorrow I will learn:
+
+- Package kya hota hai?
+- Package Manager kya hota hai?
+- apt vs apt-get
+- Repository kya hoti hai?
+- Update vs Upgrade
+- Install vs Remove vs Purge
+- Dependency kya hoti hai?
+- Cache kya hota hai?
