@@ -1,114 +1,56 @@
 <div align="center">
 
-<img src="assets/devops-banner.png" width="100%" alt="DevOps Banner"/>
+# 🚀 DevOps Engineering Roadmap
 
-# 🚀 DevOps Lab
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=34&pause=1000&color=00F7FF&center=true&vCenter=true&width=900&lines=Linux+Engineer;DevOps+Engineer;Cloud+Engineer;Docker+%7C+Kubernetes;AWS+%7C+Terraform;CI%2FCD+Automation;Always+Learning..." />
 
-### Building Production-Ready Cloud & DevOps Skills
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="650"/>
 
-<p>
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"/>
-<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900"/>
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white"/>
-</p>
+# 👨‍💻 Hardik Srivastava
 
-<p>
-<img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white"/>
-<img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"/>
-<img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white"/>
-<img src="https://img.shields.io/badge/ArgoCD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white"/>
-</p>
-
-> **Learn • Build • Automate • Deploy • Repeat**
+### Linux • DevOps • Cloud • Automation
 
 </div>
+## 🛠️ Tech Stack
 
----
+![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-# 👨‍💻 About This Repository
+![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git)
 
-This repository documents my journey toward becoming a Cloud & DevOps Engineer by building production-ready skills through hands-on practice, automation, and real-world projects.
+![](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
 
----
+![](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash)
 
-## ⚙️ Tech Stack
+![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
 
-| Category | Technologies |
-|----------|--------------|
-| 🐧 Operating System | Linux |
-| 🌐 Networking | TCP/IP, DNS, HTTP, SSH |
-| 🔀 Version Control | Git & GitHub |
-| 🐍 Scripting | Bash, Python |
-| 🐳 Containers | Docker |
-| ☸ Orchestration | Kubernetes |
-| ☁ Cloud | AWS |
-| 🏗 Infrastructure as Code | Terraform |
-| 🔄 CI/CD | Jenkins |
-| 📊 Monitoring | Prometheus, Grafana |
-| 🚀 GitOps | ArgoCD |
+![](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes)
 
----
+![](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws)
 
-## 📂 Repository Structure
+![](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform)
 
-```text
-DevOps-Lab/
-├── Linux/
-├── Networking/
-├── Git/
-├── Bash/
-├── Python/
-├── Docker/
-├── Kubernetes/
-├── AWS/
-├── Terraform/
-├── Jenkins/
-├── Prometheus/
-├── Grafana/
-├── ArgoCD/
-├── Projects/
-├── Cheatsheets/
-├── Errors/
-├── Interview-Questions/
-└── README.md
-```
+![](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins)
 
----
+![](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible)
 
-## 🎯 Current Focus
+# 📖 About
 
-```text
-██████████░░░░░░░░░░  Linux
-████████░░░░░░░░░░░░  Networking
-██████░░░░░░░░░░░░░░  Git
-████░░░░░░░░░░░░░░░░  Bash
-```
+Welcome to my **DevOps Learning Repository**.
 
----
+This repository documents my complete journey toward becoming a Professional DevOps Engineer.
 
-## 📌 Repository Includes
+Every topic includes:
 
-- 📖 Notes
-- 💻 Hands-on Labs
-- 🚀 Projects
-- 📸 Screenshots
-- 🛠 Troubleshooting
-- 📚 Best Practices
-- 🎯 Interview Preparation
-- 🧩 Architecture Diagrams
+- 📚 Theory Notes
+- 💻 Hands-on Practice
+- 📷 Screenshots
+- 🎯 Interview Questions
+- 📝 Commands
+- 🚀 Real-world Examples
 
----
+The goal is to build strong Linux, Cloud, DevOps, and Automation skills through consistent practice.
 
-## 💡 Learning Philosophy
 
-> **Learn → Practice → Build → Document → Improve → Repeat**
 
----
 
-<div align="center">
 
-### ⭐ Building production-ready DevOps skills, one commit at a time.
-
-</div>
