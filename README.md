@@ -1,56 +1,31 @@
 <div align="center">
 
-# 🚀 DevOps Engineering Roadmap
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=300&color=0:000000,25:0f172a,50:111827,75:1e293b,100:000000&text=DEVOPS%20LAB&fontColor=00F7FF&fontSize=55&fontAlignY=40&animation=fadeIn&desc=Linux%20•%20Cloud%20•%20Docker%20•%20Kubernetes%20•%20AWS%20•%20Terraform&descAlignY=60"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=34&pause=1000&color=00F7FF&center=true&vCenter=true&width=900&lines=Linux+Engineer;DevOps+Engineer;Cloud+Engineer;Docker+%7C+Kubernetes;AWS+%7C+Terraform;CI%2FCD+Automation;Always+Learning..." />
-
-<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="650"/>
-
-# 👨‍💻 Hardik Srivastava
-
-### Linux • DevOps • Cloud • Automation
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=34&pause=1000&color=00F7FF&center=true&vCenter=true&width=1000&lines=Welcome+to+DevOps+Lab;Linux+Administrator;Cloud+Engineer;Docker+%7C+Kubernetes;Terraform+Automation;CI%2FCD+Pipelines;Never+Stop+Learning"/>
 
 </div>
-## 🛠️ Tech Stack
+<div align="center">
 
-![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,aws,terraform,jenkins,ansible,prometheus,grafana,python,vscode"/>
 
-![](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git)
+</div>
+# ⚡ About This Repository
 
-![](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
+> **DevOps-Lab** is my complete hands-on learning repository.
 
-![](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash)
-
-![](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
-
-![](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes)
-
-![](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws)
-
-![](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform)
-
-![](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins)
-
-![](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible)
-
-# 📖 About
-
-Welcome to my **DevOps Learning Repository**.
-
-This repository documents my complete journey toward becoming a Professional DevOps Engineer.
-
-Every topic includes:
+This repository contains:
 
 - 📚 Theory Notes
 - 💻 Hands-on Practice
-- 📷 Screenshots
-- 🎯 Interview Questions
-- 📝 Commands
-- 🚀 Real-world Examples
+- 🖥️ Linux Commands
+- 🐳 Docker Labs
+- ☸ Kubernetes Labs
+- ☁ AWS Services
+- 🚀 CI/CD Pipelines
+- 📦 Terraform
+- 📊 Monitoring
+- 📸 Screenshots
+- 🎤 Interview Questions
 
-The goal is to build strong Linux, Cloud, DevOps, and Automation skills through consistent practice.
-
-
-
-
-
+Every topic is learned by doing practical work before moving to the next one.
