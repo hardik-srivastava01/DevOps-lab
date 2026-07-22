@@ -1,162 +1,239 @@
-██████████████████████████████████
+<!-- ========================================================= -->
+<!--                J.A.R.V.I.S. DEVOPS COMMAND CENTER          -->
+<!-- ========================================================= -->
 
-          DEVOPS LAB
-
-██████████████████████████████████
-
-Boot Sequence Started...
-
-█░░░░░░░░░ 10%
-
-Loading Linux Kernel...
-
-███░░░░░░ 30%
-
-Loading Docker Engine...
-
-██████░░░ 60%
-
-Connecting Kubernetes Cluster...
-
-████████░ 90%
-
-Authenticating AWS...
-
-██████████ 100%
-
-ACCESS GRANTED
-
-Welcome Engineer...
-
-
-<p align="center">
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=350&color=gradient&customColorList=12,20,24,30&text=DEVOPS%20COMMAND%20CENTER&fontColor=00F7FF&fontSize=55&animation=fadeIn&desc=Linux%20•%20Cloud%20•%20Automation%20•%20SRE&descAlignY=62"/>
-
-</p>
 ```text
-root@devops:~$
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║                J.A.R.V.I.S. - DEVOPS COMMAND CENTER                  ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
 
-whoami
+> Initializing DevOps Environment...
 
-Hardik Srivastava
+[■■□□□□□□□□] 20%  Loading Linux Knowledge Base..............[ OK ]
+[■■■■□□□□□□] 40%  Connecting Git Repository..................[ OK ]
+[■■■■■■□□□□] 60%  Preparing Docker Module....................[ PENDING ]
+[■■■■■■■■□□] 80%  Preparing Kubernetes Environment...........[ PENDING ]
+[■■■■■■■■■■]100%  DevOps Learning Environment...............[ ONLINE ]
 
-Role
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-DevOps Engineer
+Security Clearance : VERIFIED
 
-Current Mission
+Engineer : Hardik Srivastava
 
-Building Production Ready Infrastructure
+Mission :
+Become a Production-Ready DevOps & Cloud Engineer.
 
-Status
+Status : ONLINE
 
-Learning Never Stops...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
 <p align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=30&pause=1200&color=00F7FF&center=true&vCenter=true&width=900&lines=Booting+Linux.....;Loading+Docker.....;Connecting+Kubernetes.....;Terraform+Initialized.....;CI/CD+Pipeline+Ready.....;Monitoring+Production.....;Welcome+Engineer+🚀"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=340&color=gradient&customColorList=0,6,12,18,24&text=J.A.R.V.I.S.%20COMMAND%20CENTER&fontColor=00F7FF&fontSize=55&animation=twinkling&desc=Linux%20•%20DevOps%20•%20Cloud%20•%20Automation&descAlignY=63"/>
 
 </p>
+
+---
+
 <p align="center">
 
-<img width="700" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&pause=1200&color=00F7FF&center=true&vCenter=true&width=950&lines=Welcome+Engineer.;Linux+Administration.;DevOps+Automation.;Cloud+Infrastructure.;Docker+%7C+Kubernetes.;Terraform+%7C+AWS.;Never+Stop+Learning."/>
 
 </p>
+
+---
+
+# 🤖 J.A.R.V.I.S. ONLINE
+
+```text
+Good Evening, Engineer.
+
+Current Objective
+
+✔ Master Linux
+
+✔ Build Strong DevOps Fundamentals
+
+✔ Automate Infrastructure
+
+✔ Learn Cloud Technologies
+
+✔ Build Production Ready Projects
+
+System Status
+
+READY FOR NEXT COMMAND...
+```
+
+---
+
+# 💻 Terminal Session
+
+```bash
+root@jarvis:~$ whoami
+hardik
+
+root@jarvis:~$ hostname
+devops-command-center
+
+root@jarvis:~$ pwd
+/home/hardik/DevOps-Lab
+
+root@jarvis:~$ current_mission
+
+Learning Linux...
+Building DevOps Skills...
+Practicing Daily...
+Uploading GitHub Labs...
+
+Mission Status : ACTIVE
+```
+
+---
+
+# 🛰 Infrastructure Vision
+
+```text
+                         🌍 Internet
+                              │
+                       Cloudflare CDN
+                              │
+                    AWS Application Load Balancer
+                              │
+                    Kubernetes Cluster (Future)
+                ┌─────────────┴─────────────┐
+                │                           │
+          Docker Container            Docker Container
+                │                           │
+             Nginx + App                Nginx + App
+                │                           │
+                └─────────────┬─────────────┘
+                              │
+                        MySQL Database
+                              │
+                   Prometheus + Grafana
+```
+
+---
+
+# ⚡ Technology Stack
+
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,aws,terraform,jenkins,prometheus,grafana,ansible,python,vscode"/>
+<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,aws,terraform,jenkins,ansible,prometheus,grafana,python,vscode"/>
 
 </p>
-Linux
 
-██████████████████████
+---
 
-Git
+# 🎯 Mission Progress
 
-██████████████████████
+```text
+Linux           ████████████████████ 100%
 
-Networking
+Git             ████████████████████ 100%
 
-███████████░░░░░░░░░░
+Networking      ████████████░░░░░░░ 60%
 
-Docker
+Docker          ████░░░░░░░░░░░░░░░ 20%
 
-░░░░░░░░░░░░░░░░░░░░░
+Kubernetes      ░░░░░░░░░░░░░░░░░░░ 0%
 
-Kubernetes
+AWS             ░░░░░░░░░░░░░░░░░░░ 0%
 
-░░░░░░░░░░░░░░░░░░░░░
+Terraform       ░░░░░░░░░░░░░░░░░░░ 0%
 
-AWS
+CI/CD           ░░░░░░░░░░░░░░░░░░░ 0%
 
-░░░░░░░░░░░░░░░░░░░░░
+Monitoring      ░░░░░░░░░░░░░░░░░░░ 0%
+```
 
-📂 DevOps-Lab
+---
 
-│
+# 📂 Repository Structure
+
+```text
+📦 DevOps-Lab
 
 ├── 🐧 Linux
-
+│   ├── 📘 Notes
+│   ├── 💻 Practice
+│   └── 📸 Screenshots
+│
 ├── 🌐 Networking
-
 ├── 🐳 Docker
-
 ├── ☸ Kubernetes
-
 ├── ☁ AWS
-
 ├── 📦 Terraform
-
 ├── 🚀 Jenkins
-
 ├── 📊 Monitoring
-
 ├── 📁 Projects
+├── 🎤 Interview Questions
+└── 📄 README.md
+```
 
-└── 📜 README.md
+---
+
+# 📊 GitHub Analytics
 
 <p align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=hardik-srivastava01&show_icons=true&theme=tokyonight"/>
+<img width="48%" src="https://github-readme-stats.vercel.app/api?username=hardik-srivastava01&show_icons=true&theme=tokyonight"/>
 
-<img width="49%" src="https://streak-stats.demolab.com?user=hardik-srivastava01&theme=tokyonight"/>
+<img width="48%" src="https://streak-stats.demolab.com?user=hardik-srivastava01&theme=tokyonight"/>
 
 </p>
+
+---
+
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=hardik-srivastava01&theme=tokyo-night"/>
-<img src="https://github-profile-trophy.vercel.app/?username=hardik-srivastava01&theme=algolia&no-frame=true"/>
-<img src="https://raw.githubusercontent.com/hardik-srivastava01/hardik-srivastava01/output/github-contribution-grid-snake-dark.svg"/>
-🎯 Become a Production DevOps Engineer
 
-Target
-
-✔ Linux
-
-✔ Git
-
-✔ Networking
-
-⬜ Docker
-
-⬜ Kubernetes
-
-⬜ AWS
-
-⬜ Terraform
-
-⬜ CI/CD
-
-⬜ Monitoring
-
-⬜ DevSecOps
+---
 
 <p align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=150&color=gradient&customColorList=12,20,24,30"/>
+<img src="https://github-profile-trophy.vercel.app/?username=hardik-srivastava01&theme=algolia&no-frame=true&margin-w=15"/>
 
 </p>
 
+---
 
+# 🐍 Contribution Snake
 
+<p align="center">
 
+<img src="https://raw.githubusercontent.com/hardik-srivastava01/hardik-srivastava01/output/github-contribution-grid-snake-dark.svg"/>
 
+</p>
+
+---
+
+# 💬 J.A.R.V.I.S. System Message
+
+```text
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Production rewards preparation,
+not improvisation.
+
+Automate repetitive work.
+Monitor everything.
+Keep learning.
+Keep building."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+J.A.R.V.I.S. AI CORE
+```
+
+---
+
+<p align="center">
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=170&color=gradient&customColorList=0,6,12,18,24"/>
+
+</p>
