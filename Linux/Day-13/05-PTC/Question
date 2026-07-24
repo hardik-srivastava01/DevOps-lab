@@ -1,0 +1,80 @@
+# Linux Day 13 - Technical Questions (Networking Fundamentals)
+
+## 🟢 Core Level (Fundamentals)
+
+### Q1. What is an IP Address?
+
+### Q2. What is the difference between IPv4 and IPv6?
+
+### Q3. What is the difference between a Public IP and a Private IP?
+
+### Q4. What is the Loopback Address (127.0.0.1), and why is it used?
+
+### Q5. What is a Hostname?
+
+### Q6. What is DNS, and why is it required?
+
+### Q7. What is a Port Number?
+
+### Q8. What is the difference between TCP and UDP?
+
+### Q9. What is a Network Interface?
+
+### Q10. What is Routing?
+
+---
+
+# 🟡 Intermediate Level (Practical & Troubleshooting)
+
+### Q11. How do you check the IP address of a Linux machine?
+
+### Q12. How do you verify whether a service is listening on port 8080?
+
+### Q13. Which command would you use to display the routing table?
+
+### Q14. How would you troubleshoot if `google.com` is not resolving to an IP address?
+
+### Q15. What is the difference between `nslookup` and `dig`?
+
+### Q16. When would you use `curl` instead of `wget`?
+
+### Q17. How do you verify that a web server is responding correctly without opening a browser?
+
+### Q18. How do you identify active TCP and UDP connections in Linux?
+
+### Q19. Why can two applications not listen on the same IP and port simultaneously?
+
+### Q20. What information does `hostnamectl` provide?
+
+---
+
+# 🔴 Advanced Level (FAANG / Product Company Style)
+
+### Q21.
+A website is down after deployment. Explain your networking troubleshooting approach from DNS resolution to application response.
+
+### Q22.
+Your application is accessible using `127.0.0.1:8080` but not from another machine. What could be the possible causes?
+
+### Q23.
+A server can reach the Internet using its IP address but cannot access websites using domain names. What would you investigate?
+
+### Q24.
+Your application is running, but users receive "Connection Refused." How would you diagnose the issue?
+
+### Q25.
+How would you determine whether a production issue is caused by DNS, Routing, Firewall, Network, or the Application itself?
+
+---
+
+# ⭐ Expert Bonus Questions (30–50 LPA)
+
+### Q26. Explain the complete DNS Resolution process from a browser to the DNS server.
+
+### Q27. What happens internally when you execute `curl https://google.com`?
+
+### Q28. Why does TCP use a Three-Way Handshake? What problem does it solve?
+
+### Q29. How would you identify which process owns port **443** on a production Linux server?
+
+### Q30. If a Kubernetes Pod cannot communicate with another Pod, which networking components would you check first?
