@@ -1,0 +1,146 @@
+# Linux Day 15 - Technical Interview Questions (Bash Scripting)
+
+## 🟢 Core Level (Fundamentals)
+
+### Q1. What is Bash, and how is it different from a Shell?
+
+### Q2. What is a Shell Script?
+
+### Q3. Why is Bash scripting important in DevOps?
+
+### Q4. What is the purpose of the Shebang (`#!/bin/bash`)?
+
+### Q5. What is the difference between a Variable and a Command-Line Argument?
+
+### Q6. What is the purpose of the `read` command?
+
+### Q7. What is the difference between `$1` and `$?`?
+
+### Q8. What is Exit Status, and why is it important?
+
+### Q9. What is the difference between a `for` loop and a `while` loop?
+
+### Q10. Why do we use `chmod +x` before executing a script?
+
+---
+
+# 🟡 Intermediate Level (Hands-on & Troubleshooting)
+
+### Q11.
+Your Bash script shows:
+
+```bash
+Permission denied
+```
+
+How would you troubleshoot and fix it?
+
+---
+
+### Q12.
+Your script executes successfully, but `echo $?` returns `1`. What does it indicate?
+
+---
+
+### Q13.
+A script is expecting two command-line arguments, but only one is provided. How would you handle this situation?
+
+---
+
+### Q14.
+How would you stop a Bash script immediately if any command fails?
+
+---
+
+### Q15.
+A user enters invalid input into your script. How would you validate the input?
+
+---
+
+### Q16.
+Your `for` loop runs only once instead of multiple times. What could be the possible reasons?
+
+---
+
+### Q17.
+A `while` loop never exits. How would you debug the problem?
+
+---
+
+### Q18.
+How would you write a Bash script that checks whether a file exists before processing it?
+
+---
+
+### Q19.
+How would you use Exit Status (`$?`) to decide whether to continue or terminate a deployment script?
+
+---
+
+### Q20.
+Your Bash script works manually but fails inside a CI/CD pipeline. What would you investigate?
+
+---
+
+# 🔴 Advanced Level (FAANG / Product Companies)
+
+### Q21.
+Design a Bash script that checks whether a web server is running. If the service is down, restart it automatically and log the result.
+
+---
+
+### Q22.
+Your deployment script fails halfway through. How would you make the script safe to rerun without causing duplicate operations?
+
+---
+
+### Q23.
+How would you write a Bash script to deploy an application on 100 Linux servers automatically?
+
+---
+
+### Q24.
+A backup script is deleting incorrect files in production. How would you debug and prevent such incidents?
+
+---
+
+### Q25.
+How would you build a Bash script that performs:
+- Health Check
+- Disk Usage Check
+- Memory Check
+- Service Status Check
+- Email Notification on Failure
+
+---
+
+# ⭐ Expert Production Scenarios
+
+### Q26.
+Your CI/CD deployment pipeline suddenly stops after executing a Bash script. Which logs and Exit Status values would you inspect?
+
+---
+
+### Q27.
+A Bash script works on Ubuntu but fails on CentOS. What compatibility issues would you investigate?
+
+---
+
+### Q28.
+How would you securely pass database passwords to a Bash script without hardcoding them?
+
+---
+
+### Q29.
+Your automation script accidentally deletes a production directory. What safeguards would you implement to prevent this?
+
+---
+
+### Q30.
+Design a production-grade Bash automation framework for:
+- Log Rotation
+- Backup
+- Health Monitoring
+- Error Handling
+- Alerting
+- Audit Logging
