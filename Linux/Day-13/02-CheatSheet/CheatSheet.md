@@ -1,0 +1,90 @@
+# Linux Day 13 CheatSheet
+
+## One-Line Interview Answers
+
+### What is an IP Address?
+→ An IP address uniquely identifies a device on a network.
+
+### Public IP vs Private IP?
+→ Public IP is Internet-routable; Private IP is used within private networks.
+
+### What is Loopback Address?
+→ 127.0.0.1 is the localhost address used for internal communication.
+
+### What is a Hostname?
+→ A hostname is the human-readable identifier of a Linux system.
+
+### What is DNS?
+→ DNS resolves domain names into IP addresses.
+
+### What is a Port?
+→ A port identifies the destination application on a host.
+
+### What is TCP?
+→ TCP is a reliable, connection-oriented transport protocol.
+
+### What is UDP?
+→ UDP is a fast, connectionless transport protocol.
+
+### What is a Network Interface?
+→ A network interface connects a system to a network.
+
+### What is Routing?
+→ Routing determines the path packets take to reach their destination.
+
+---
+
+## Interview Keywords
+
+- IPv4
+- IPv6
+- CIDR
+- DNS Resolution
+- Socket
+- Port
+- TCP Handshake
+- UDP
+- Routing Table
+- Gateway
+- Interface
+- Loopback
+- ICMP
+- Latency
+- Packet
+
+---
+
+## Common Follow-up Questions
+
+- How does DNS resolution work?
+- Why is TCP slower than UDP?
+- What happens if DNS fails?
+- How do you check if a service is listening?
+- Difference between `curl` and `wget`?
+- How do you verify routing?
+- Why can't a Private IP be accessed from the Internet?
+- How do you troubleshoot a website that is down?
+
+---
+
+## Production Relevance
+
+### DevOps
+
+- Validate deployments.
+- Debug application connectivity.
+- Verify service ports.
+- Test APIs.
+
+### SRE
+
+- Handle production incidents.
+- Diagnose network failures.
+- Verify service availability.
+
+### Cloud Engineer
+
+- Troubleshoot EC2 networking.
+- Verify Load Balancers.
+- Configure Route53.
+- Validate Security Groups.
