@@ -1,12 +1,18 @@
-# Day 12 – Linux Environment Variables & Shell Configuration
+# Linux Day 12 - Environment Variables
 
-## 📚 Theory (Samajhna Hai)
+## Objective
 
-### 1. What is an Environment Variable?
+Learn how Linux stores and manages environment variables. Understand the difference between Local, Global, Session, and Persistent variables, how the `PATH` variable works, and how `.bashrc`, `.profile`, and `.bash_profile` are used in real-world Linux, DevOps, SRE, and Cloud environments.
 
-Environment Variables are **key-value pairs** that store system or user-specific information. Programs and the shell use them to know where files, executables, and configurations are located.
+---
 
-**Example:**
+## What are Environment Variables?
+
+Environment Variables are key-value pairs that store configuration information used by the shell, applications, and operating system.
+
+They allow programs to access required information without hardcoding values.
+
+Example
 
 ```bash
 HOME=/home/radhe
@@ -16,281 +22,295 @@ PATH=/usr/local/bin:/usr/bin:/bin
 
 ---
 
-## 2. Types of Variables
+## Why is it Important?
 
-### Local Variable
+Environment Variables are widely used in DevOps, SRE, and Cloud Engineering for configuration management and automation.
 
-Accessible only in the current shell.
+Without them, applications would require hardcoded paths, usernames, passwords, and configuration values.
+
+---
+
+## Real DevOps Use Cases
+
+- Store application configuration.
+- Configure AWS CLI credentials.
+- Set Java or Python paths.
+- Store Kubernetes configuration paths.
+- Configure Terraform variables.
+- Pass secrets securely through CI/CD.
+- Configure Docker containers.
+- Set deployment environments.
+
+---
+
+# Important Concepts
+
+---
+
+## Local Variables
+
+A Local Variable exists only in the current shell and is not inherited by child processes.
+
+Example
 
 ```bash
-name="Hardik"
-echo $name
+NAME="Radhe"
+
+echo $NAME
 ```
 
 ---
 
-### Environment Variable
+## Global Variables
 
-Available to child processes after exporting.
+A Global (Environment) Variable is available to the current shell and all child processes.
+
+Example
 
 ```bash
-export name="Hardik"
-echo $name
+export NAME="Radhe"
+
+echo $NAME
 ```
 
 ---
 
-## 3. Common Environment Variables
+## Session Variables
 
-| Variable | Purpose |
-|----------|---------|
-| HOME | User's home directory |
-| PATH | Locations where executables are searched |
-| USER | Current username |
-| SHELL | Current shell |
-| PWD | Current working directory |
-| HOSTNAME | System hostname |
-| TERM | Terminal type |
+Session Variables remain available only until the current terminal session ends.
 
-View all variables:
+Example
 
 ```bash
-printenv
+PROJECT="DevOps"
+
+echo $PROJECT
+```
+
+Close the terminal, and the variable disappears.
+
+---
+
+## Persistent Variables
+
+Persistent Variables remain available even after logout or system restart.
+
+They are usually configured in:
+
+- `.bashrc`
+- `.profile`
+- `.bash_profile`
+
+---
+
+## PATH Variable
+
+`PATH` is an environment variable that tells Linux where to search for executable commands.
+
+View PATH
+
+```bash
+echo $PATH
+```
+
+Example
+
+```
+/usr/local/bin:/usr/bin:/bin
+```
+
+When you type:
+
+```bash
+python
+```
+
+Linux searches each directory in `PATH` until it finds the executable.
+
+---
+
+## `.bashrc`
+
+`.bashrc` is executed whenever a new interactive Bash shell starts.
+
+Common Uses
+
+- Aliases
+- Environment Variables
+- Prompt customization
+- Shell functions
+
+Example
+
+```bash
+export EDITOR=nano
+```
+
+Apply changes
+
+```bash
+source ~/.bashrc
+```
+
+---
+
+## `.profile`
+
+`.profile` is executed during user login.
+
+It is used to configure login session settings and environment variables that should be available after signing in.
+
+---
+
+## `.bash_profile`
+
+`.bash_profile` is executed only for Bash login shells.
+
+If present, it usually loads `.bashrc`.
+
+Example
+
+```bash
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+```
+
+---
+
+## `export`
+
+`export` converts a local variable into an environment variable.
+
+Example
+
+```bash
+NAME="Radhe"
+
+export NAME
 ```
 
 or
 
 ```bash
-env
+export NAME="Radhe"
 ```
+
+Now child processes can access the variable.
 
 ---
 
-## 4. PATH Variable
+## `echo $VARIABLE`
 
-PATH tells Linux where to search for commands.
+Displays the value of an environment variable.
 
-Check PATH:
-
-```bash
-echo $PATH
-```
-
-Example Output:
-
-```text
-/usr/local/bin:/usr/bin:/bin
-```
-
-Directories are separated by `:`.
-
----
-
-## 5. Creating Variables
-
-```bash
-city="Kanpur"
-echo $city
-```
-
-Delete Variable
-
-```bash
-unset city
-```
-
----
-
-## 6. export Command
-
-Makes a variable available to child processes.
-
-```bash
-export PROJECT="DevOps"
-```
-
-Check:
-
-```bash
-echo $PROJECT
-```
-
----
-
-## 7. .bashrc
-
-Runs every time a new interactive Bash shell starts.
-
-Location:
-
-```bash
-~/.bashrc
-```
-
-Example:
-
-```bash
-export JAVA_HOME=/usr/lib/jvm/java
-alias ll="ls -lah"
-```
-
-Reload:
-
-```bash
-source ~/.bashrc
-```
-
----
-
-## 8. .profile
-
-Runs when the user logs in.
-
-Location:
-
-```bash
-~/.profile
-```
-
-Used for login-shell configurations.
-
----
-
-## 9. .bash_profile
-
-Used mainly on login shells.
-
-If present, Bash executes:
-
-```text
-.bash_profile
-```
-
-instead of
-
-```text
-.profile
-```
-
----
-
-## 10. Difference
-
-| File | Runs When |
-|------|-----------|
-| .bashrc | Every interactive shell |
-| .profile | Login shell |
-| .bash_profile | Login shell (preferred if exists) |
-
----
-
-# 💻 Hands-on Practice
-
-## View Variables
-
-```bash
-printenv
-env
-```
-
----
-
-## Display Variables
+Example
 
 ```bash
 echo $HOME
+
 echo $USER
+
 echo $PATH
-echo $SHELL
-echo $PWD
 ```
 
 ---
 
-## Create Local Variable
+## Commands Practiced
 
 ```bash
-course="Linux"
-echo $course
-```
+env
 
----
+printenv
 
-## Export Variable
+set
 
-```bash
-export COMPANY="OpenAI"
-echo $COMPANY
-```
+export
 
----
+unset
 
-## Remove Variable
+echo $HOME
 
-```bash
-unset COMPANY
-```
+echo $USER
 
----
+echo $PATH
 
-## Open .bashrc
-
-```bash
-nano ~/.bashrc
-```
-
-Add:
-
-```bash
-export MY_NAME="Hardik"
-alias gs="git status"
-```
-
-Save and reload:
-
-```bash
 source ~/.bashrc
+
+cat ~/.bashrc
+
+cat ~/.profile
+
+cat ~/.bash_profile
 ```
 
 ---
 
-## Verify
+## Common Mistakes
 
-```bash
-echo $MY_NAME
-gs
-```
-
----
-
-# 🎯 Interview Questions
-
-1. What is an environment variable?
-2. Difference between local and environment variables?
-3. What is PATH?
-4. Why do we use export?
-5. Difference between `.bashrc` and `.profile`?
-6. What is `.bash_profile`?
-7. How do you permanently add an environment variable?
-8. How do you reload `.bashrc`?
-9. Difference between `env` and `printenv`?
-10. How do child processes inherit variables?
+- Forgetting to use `export` when child processes need the variable.
+- Editing `.bashrc` but forgetting to run `source ~/.bashrc`.
+- Hardcoding sensitive values like passwords or API keys.
+- Accidentally overwriting the `PATH` variable.
+- Confusing Local Variables with Environment Variables.
+- Storing secrets directly in shell configuration files.
 
 ---
 
-# ⭐ Key Takeaways
+## Hands-on Practice
 
-- Environment variables store system information.
-- `PATH` tells Linux where to find commands.
-- `export` shares variables with child processes.
-- `.bashrc` is for interactive shell configuration.
-- `.profile` and `.bash_profile` are used for login shells.
-- Use `source ~/.bashrc` to apply changes without restarting the terminal.
+Today I explored Linux Environment Variables. I created local and global variables, viewed built-in environment variables, understood the purpose of the `PATH` variable, and learned how `.bashrc`, `.profile`, and `.bash_profile` are used to make configurations persistent across login sessions.
 
 ---
 
-# Next Steps
-  Tommarow i will learn
+## Real World Problems You Can Solve
+
+### DevOps
+
+- Configure application environments.
+- Set Java, Python, and Node.js paths.
+- Pass configuration values to deployment scripts.
+- Configure Docker container environments.
+- Manage CI/CD pipeline variables.
+
+### SRE
+
+- Diagnose application startup failures caused by missing variables.
+- Validate runtime configuration.
+- Troubleshoot PATH-related command failures.
+- Configure monitoring tools.
+
+### Cloud Engineer
+
+- Configure AWS CLI credentials.
+- Set Terraform variables.
+- Manage Kubernetes kubeconfig paths.
+- Configure cloud SDK environments.
+- Automate cloud deployments using environment variables.
+
+---
+
+## Best Practices
+
+- Use meaningful variable names.
+- Export variables only when necessary.
+- Store secrets in Secret Managers or Vaults instead of shell files.
+- Never hardcode credentials in scripts.
+- Backup shell configuration files before editing.
+- Use `source ~/.bashrc` after making changes.
+- Validate the `PATH` variable before modifying it.
+
+---
+
+## Key Takeaway
+
+Environment Variables separate configuration from code, making Linux systems, automation scripts, and cloud applications more secure, reusable, and easier to manage. Mastering them is essential for every DevOps, SRE, and Cloud Engineer.
+
+---
+
+## Next Step
+
+Tomorrow I will learn:
 
 - IP Address
 - Public IP vs Private IP
