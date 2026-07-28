@@ -180,6 +180,7 @@ Today I learned that Linux is the foundation of DevOps. Understanding basic term
 
 Tomorrow I will learn:
 
-- Linux File System
-- Hidden Files
-- `pwd`, `ls`, and `cd` in more depth
+- Absolute Path vs Relative Path
+- Files vs Directories
+- Copy vs Move
+- Recursive operations (-r)

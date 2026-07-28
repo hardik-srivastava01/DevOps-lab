@@ -334,13 +334,9 @@ Strong file and directory management skills are required for every Linux-based r
 
 Tomorrow I will learn:
 
-- Linux File Permissions
-- Read (r)
-- Write (w)
-- Execute (x)
-- User, Group & Others
-- Symbolic & Numeric Permissions
-- Ownership
-- chmod
-- chown
-- chgrp
+- Linux File System (Revision + Deep Dive)
+- Hidden Files (. files)
+- pwd, ls, and cd in more depth
+- Absolute vs Relative Path (Revision)
+- Tab Auto-completion
+- Command History basics
