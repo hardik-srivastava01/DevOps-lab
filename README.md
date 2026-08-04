@@ -179,13 +179,29 @@ Monitoring      ░░░░░░░░░░░░░░░░░░░ 0%
 ---
 
 # 📊 GitHub Analytics
+## 📊 GitHub Stats
 
 <p align="center">
+  <img height="170" src="https://github-readme-stats-eight-theta.vercel.app/api?username=hardik-srivastava01&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
 
-<img width="48%" src="https://github-readme-stats.vercel.app/api?username=hardik-srivastava01&show_icons=true&theme=tokyonight"/>
+  <img height="170" src="https://streak-stats.demolab.com?user=hardik-srivastava01&theme=tokyonight&hide_border=true"/>
+</p>
 
-<img width="48%" src="https://streak-stats.demolab.com?user=hardik-srivastava01&theme=tokyonight"/>
+<p align="center">
+  <img height="170" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=hardik-srivastava01&layout=compact&theme=tokyonight&hide_border=true"/>
+</p>
 
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=hardik-srivastava01&theme=tokyonight"/>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=hardik-srivastava01&theme=tokyonight"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=hardik-srivastava01&theme=tokyonight&utcOffset=5.5"/>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=hardik-srivastava01&theme=algolia&no-frame=true&row=2&column=4"/>
 </p>
 
 ---
