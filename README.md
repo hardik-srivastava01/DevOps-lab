@@ -177,8 +177,6 @@ Monitoring      ░░░░░░░░░░░░░░░░░░░ 0%
 ```
 
 ---
-
-# 📊 GitHub Analytics
 ## 📊 GitHub Stats
 
 <p align="center">
