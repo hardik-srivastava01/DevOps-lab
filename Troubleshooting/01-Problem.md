@@ -1,283 +1,86 @@
 # SRE Troubleshooting Lab 01
 
-# Scenario  
-Website is down
+# Incident: Website Down
 
-## Problem
+## Scenario
 
-The website is down and users are unable to access it.
+Users reported that the website was inaccessible.
 
-Error seen by users:
-
-- Connection Refused
-- Timeout
-- 502 Bad Gateway
-- 503 Service Unavailable
+The application was hosted on a Linux server running Nginx.
 
 ---
 
-# Investigation Workflow
+# Symptoms
+
+- Website not opening
+- Browser showed **Connection Refused**
+- Users could not access the application
+- Service unavailable
+
+---
+
+# Investigation Path
 
 ```text
-            Website Down
+Users Report Website Down
+          │
+          ▼
+Verify Issue
+          │
+          ▼
+Check Network Connectivity
+          │
+          ▼
+Check Server Reachability
+          │
+          ▼
+Check Nginx Service
+          │
+          ▼
+Check Listening Ports
+          │
+          ▼
+Check Logs
+          │
+          ▼
+Identify Root Cause
+          │
+          ▼
+Apply Fix
+          │
+          ▼
+Verify Website
+```
+
+---
+
+# Architecture
+
+```text
+            User Browser
                   │
                   ▼
-        Is Network Reachable?
+            HTTP Request
                   │
-        ┌─────────┴─────────┐
-        │                   │
-       No                  Yes
-        │                   │
-Check DNS/IP         Can Server Respond?
-        │                   │
-        ▼                   ▼
- Fix Network         Check Web Server
-                          │
-                ┌─────────┴─────────┐
-                │                   │
-             Stopped            Running
-                │                   │
-       Start Service        Check Port
-                │                   │
-                ▼                   ▼
-         Check Logs         Port Listening?
-                                  │
-                     ┌────────────┴───────────┐
-                     │                        │
-                    No                       Yes
-                     │                        │
-             Start Application        Check Firewall
-                     │                        │
-                     ▼                        ▼
-                 Verify                Check Application Logs
-                                             │
-                                             ▼
-                                      Root Cause Found
-                                             │
-                                             ▼
-                                            Fix
-                                             │
-                                             ▼
-                                       Verify Website
+                  ▼
+          Linux Web Server
+                  │
+          ┌───────┴────────┐
+          │                │
+       Nginx          Backend App
+          │                │
+          └───────┬────────┘
+                  ▼
+              Website
 ```
 
 ---
 
-# Step 1 — Check Network Connectivity
+# Step 1 — Verify Issue
 
-## Why?
+## Why
 
-If the server is unreachable, checking services is useless.
-
-Commands
-
-```bash
-ping google.com
-ping <server-ip>
-```
-
-Expected
-
-```
-64 bytes from ...
-```
-
-If failed
-
-- Internet issue
-- Network issue
-- DNS issue
-
----
-
-# Step 2 — Check DNS Resolution
-
-## Why?
-
-Sometimes the website is down because the domain is not resolving.
-
-Commands
-
-```bash
-nslookup example.com
-
-dig example.com
-```
-
-Verify
-
-- Correct IP
-- DNS response received
-
----
-
-# Step 3 — Check Server Reachability
-
-Commands
-
-```bash
-ssh user@server-ip
-```
-
-or
-
-```bash
-ping server-ip
-```
-
-If SSH fails
-
-Possible causes
-
-- Server down
-- Firewall
-- Network failure
-
----
-
-# Step 4 — Check Web Server Status
-
-Why?
-
-Nginx or Apache may have stopped.
-
-Commands
-
-```bash
-systemctl status nginx
-```
-
-or
-
-```bash
-systemctl status apache2
-```
-
-If stopped
-
-```bash
-sudo systemctl start nginx
-```
-
----
-
-# Step 5 — Check Listening Ports
-
-Why?
-
-Service may be running but not listening.
-
-Commands
-
-```bash
-ss -tulnp
-
-netstat -tulnp
-```
-
-Verify
-
-```
-80
-443
-```
-
-are listening.
-
----
-
-# Step 6 — Check Logs
-
-Why?
-
-Logs tell the actual reason.
-
-Commands
-
-```bash
-journalctl -u nginx
-
-tail -f /var/log/nginx/error.log
-
-tail -f /var/log/syslog
-```
-
-Possible errors
-
-- Permission denied
-- Port already in use
-- Configuration error
-- Disk full
-
----
-
-# Step 7 — Check Disk Space
-
-Why?
-
-A full disk can stop applications from writing logs or starting.
-
-Command
-
-```bash
-df -h
-```
-
-If disk usage
-
-```
-100%
-```
-
-Free space immediately.
-
----
-
-# Step 8 — Check Memory
-
-Why?
-
-Out of memory can kill processes.
-
-Commands
-
-```bash
-free -h
-
-top
-
-htop
-```
-
----
-
-# Step 9 — Check Running Processes
-
-Commands
-
-```bash
-ps aux
-
-pgrep nginx
-```
-
-Verify
-
-Process exists.
-
----
-
-# Step 10 — Restart Service
-
-Commands
-
-```bash
-sudo systemctl restart nginx
-```
-
----
-
-# Step 11 — Verify Website
+Confirm that the website is actually unavailable.
 
 Commands
 
@@ -287,96 +90,162 @@ curl http://localhost
 curl http://<server-ip>
 ```
 
-Browser
-
-```
-http://server-ip
-```
-
 Expected
 
 ```
 HTTP 200 OK
 ```
 
+Observed
+
+```
+Connection Refused
+```
+
 ---
 
-# Root Cause (Example)
+# Step 2 — Check Network
 
-The Nginx service had stopped after a failed configuration update.
+Commands
+
+```bash
+ping <server-ip>
+```
+
+Purpose
+
+Verify the server is reachable.
+
+---
+
+# Step 3 — Check Nginx Service
+
+Commands
+
+```bash
+systemctl status nginx
+```
+
+Observed
+
+```
+inactive (dead)
+```
+
+---
+
+# Step 4 — Check Port
+
+Commands
+
+```bash
+ss -tulnp
+```
+
+Observed
+
+Port 80 was not listening.
+
+---
+
+# Step 5 — Check Logs
+
+Commands
+
+```bash
+journalctl -u nginx
+
+tail -f /var/log/nginx/error.log
+```
+
+Purpose
+
+Identify why Nginx stopped.
+
+---
+
+# Root Cause
+
+The Nginx service was stopped, so no process was listening on port 80.
 
 ---
 
 # Resolution
 
 ```bash
-sudo systemctl restart nginx
+sudo systemctl start nginx
 ```
 
 ---
 
 # Verification
 
-✅ Website accessible
+Commands
 
-✅ HTTP 200 OK
+```bash
+systemctl status nginx
 
-✅ Service Active
+ss -tulnp
 
-✅ Port 80 Listening
+curl http://localhost
+```
+
+Expected
+
+```
+HTTP/1.1 200 OK
+```
+
+Website opened successfully.
 
 ---
 
 # Lessons Learned
 
-- Never assume the cause.
-- Always troubleshoot layer by layer.
-- Verify each hypothesis before moving on.
-- Check logs before guessing.
-- Confirm the fix with testing.
+- Verify the issue before troubleshooting.
+- Check the service before changing configurations.
+- Always inspect logs instead of guessing.
+- Confirm port availability after restarting the service.
+- Verify the fix from the user's perspective.
 
 ---
 
 # Commands Used
 
 ```bash
-ping
-nslookup
-dig
-ssh
-systemctl status nginx
-systemctl restart nginx
-ss -tulnp
-ps aux
-pgrep
-journalctl
-tail
-df -h
-free -h
-top
-htop
 curl
+ping
+systemctl status nginx
+systemctl start nginx
+ss -tulnp
+journalctl -u nginx
+tail -f /var/log/nginx/error.log
 ```
-# Decision Tree 
-```                  
-                    Website Down
-                          │
-                          ▼
-              What error do users see?
-                          │
-      ┌──────────┬────────────┬──────────────┬────────────┐
-      │          │            │              │
- Connection   Timeout      502 Bad       503 Service
- Refused                    Gateway      Unavailable
-      │          │            │              │
-      ▼          ▼            ▼              ▼
-Service?     Network?     Backend?      Resources?
-Port?        Firewall?    App?          CPU?
-Process?     Routing?     Port?         RAM?
 
+---
+
+# Production Impact
+
+- Users were unable to access the website.
+- Business services were temporarily unavailable.
+- Restoring the Nginx service resolved the outage.
+
+---
+
+# Prevention
+
+- Enable Nginx auto-start:
+
+```bash
+sudo systemctl enable nginx
 ```
+
+- Configure monitoring and alerts.
+- Regularly review service logs.
+- Include health checks in monitoring.
+
 ---
 
 # Interview Answer (2 Minutes)
 
-> "When a website is reported down, I follow a structured troubleshooting approach instead of guessing. First, I verify network connectivity and DNS resolution. Then I check whether the server is reachable via SSH. After that, I verify the web server status using `systemctl status nginx`, ensure ports 80/443 are listening with `ss -tulnp`, and inspect logs using `journalctl` or the Nginx error log. I also check disk space, memory, and running processes to identify resource issues. Once I find the root cause, I apply the fix, restart the service if required, and finally verify the website using `curl` and a browser. This systematic approach minimizes downtime and avoids unnecessary changes."
+> A website outage was reported by users. I first verified the issue using `curl`, then checked server connectivity. After confirming the server was reachable, I inspected the Nginx service using `systemctl status nginx` and found it inactive. I verified that port 80 was not listening with `ss -tulnp` and examined the logs using `journalctl` and the Nginx error log. After identifying that the service had stopped, I restarted it with `systemctl start nginx` and confirmed recovery by checking the service status, listening ports, and receiving an HTTP 200 response from `curl`. This structured approach helped identify the root cause quickly and restore service safely.
