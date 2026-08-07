@@ -357,6 +357,21 @@ top
 htop
 curl
 ```
+# Decision Tree 
+                    Website Down
+                          │
+                          ▼
+              What error do users see?
+                          │
+      ┌──────────┬────────────┬──────────────┬────────────┐
+      │          │            │              │
+ Connection   Timeout      502 Bad       503 Service
+ Refused                    Gateway      Unavailable
+      │          │            │              │
+      ▼          ▼            ▼              ▼
+Service?     Network?     Backend?      Resources?
+Port?        Firewall?    App?          CPU?
+Process?     Routing?     Port?         RAM?
 
 ---
 
