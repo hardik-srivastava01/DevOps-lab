@@ -358,6 +358,7 @@ htop
 curl
 ```
 # Decision Tree 
+```                  
                     Website Down
                           │
                           ▼
@@ -373,6 +374,7 @@ Service?     Network?     Backend?      Resources?
 Port?        Firewall?    App?          CPU?
 Process?     Routing?     Port?         RAM?
 
+```
 ---
 
 # Interview Answer (2 Minutes)
